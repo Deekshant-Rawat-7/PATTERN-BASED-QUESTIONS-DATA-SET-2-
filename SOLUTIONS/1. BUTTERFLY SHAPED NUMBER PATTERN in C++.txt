@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main()
+{
+    printf("Enter the odd number row size:");
+    int rs;
+    scanf("%d", &rs);
+    int in, out;
+    int de = 1;
+
+    for (out = 1; out <= rs; out++)
+    {
+        for (in = 1; in <= rs; in++)
+        {
+            if (in <= de || in >= rs - de + 1)
+            {
+                printf("%d", in);
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        if (out <= rs / 2)
+            de++;
+        else
+            de--;
+        printf("\n");
+    }
+}
